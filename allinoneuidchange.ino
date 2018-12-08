@@ -1,7 +1,6 @@
 /**
   Note *
-  This not build my myself i have taken some codes from internet also and arranged in a order for aurdino arm
- *
+  This program is combination of work of differnet people 
  * Typical pin layout used:
  * -------------------------------------
  *             MFRC522      Arduino     

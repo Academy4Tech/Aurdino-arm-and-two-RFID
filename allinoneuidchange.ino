@@ -1,29 +1,19 @@
 /**
- * --------------------------------------------------------------------------------------------------------------------
- * Example sketch/program showing how to read data from more than one PICC to serial.
- * --------------------------------------------------------------------------------------------------------------------
- * This is a MFRC522 library example; for further details and other examples see: https://github.com/miguelbalboa/rfid
- *
- * Example sketch/program showing how to read data from more than one PICC (that is: a RFID Tag or Card) using a
- * MFRC522 based RFID Reader on the Arduino SPI interface.
- *
- * Warning: This may not work! Multiple devices at one SPI are difficult and cause many trouble!! Engineering skill
- *          and knowledge are required!
- *
- * @license Released into the public domain.
+  Note *
+  This not build my myself i have taken some codes from internet also and arranged in a order for aurdino arm
  *
  * Typical pin layout used:
- * -----------------------------------------------------------------------------------------
- *             MFRC522      Arduino       Arduino   Arduino    Arduino          Arduino
- *             Reader/PCD   Uno/101       Mega      Nano v3    Leonardo/Micro   Pro Micro
- * Signal      Pin          Pin           Pin       Pin        Pin              Pin
- * -----------------------------------------------------------------------------------------
- * RST/Reset   RST          9             5         D9         RESET/ICSP-5     RST
+ * -------------------------------------
+ *             MFRC522      Arduino     
+ *             Reader/PCD   Uno/101     
+ * Signal      Pin          Pin         
+ * -------------------------------------
+ * RST/Reset   RST          ICSP-5           
  * SPI SS 1    SDA(SS)      ** custom, take a unused pin, only HIGH/LOW required **
  * SPI SS 2    SDA(SS)      ** custom, take a unused pin, only HIGH/LOW required **
- * SPI MOSI    MOSI         11 / ICSP-4   51        D11        ICSP-4           16
- * SPI MISO    MISO         12 / ICSP-1   50        D12        ICSP-1           14
- * SPI SCK     SCK          13 / ICSP-3   52        D13        ICSP-3           15
+ * SPI MOSI    MOSI         ICSP-4 
+ * SPI MISO    MISO         ICSP-1 
+ * SPI SCK     SCK          ICSP-3 
  *
  */
 
@@ -135,14 +125,8 @@ void loop() {
       }
 }
 
-/**
- * Helper routine to dump a byte array as hex values to Serial.
- 
-void dump_byte_array(byte *buffer, byte bufferSize) {
-  for (byte i = 0; i < bufferSize; i++) {
-    Serial.print(buffer[i] < 0x10 ? " 0" : " ");
-    Serial.print(buffer[i], HEX);
-  }
+/*
+ Note that here i am changing the UID number to a single number : )
   */
  double dump_byte_array(unsigned char *buffer)
 {

@@ -1,10 +1,15 @@
 /**
   Note *
   This program is combination of work of differnet people 
+  ********************************************************
+  ********************************************************
+              Please refer the attached pdf 
+  ********************************************************
+  ********************************************************
  * Typical pin layout used:
  * -------------------------------------
  *             MFRC522      Arduino     
- *             Reader/PCD   Uno/101     
+ *             Reader/PCD   DUE   
  * Signal      Pin          Pin         
  * -------------------------------------
  * RST/Reset   RST          ICSP-5           
